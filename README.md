@@ -2,7 +2,7 @@
 
 ## Note
 
-There are 3 folder in this page. The VolumeVisualisation folder is a project for the Part 1, the FlowVisualisation folder is a project for the Part 2, hedgehog visualisation and glyph-based visualisation, while the Streamline folder is a project for the Part 2, strealine-based visualisation.
+There are 3 folder in this page. The VolumeVisualisation folder is a project for Part 1, the FlowVisualisation folder is a project for Part 2, hedgehog visualisation and glyph-based visualisation, while the Streamline folder is a project for Part 2, strealine-based visualisation.
 
 The build folder is not included due to the large file of more than 100MB in it. Therefore, to run the code, the configure, generate and run project process have to be done using CMake manually.
 
