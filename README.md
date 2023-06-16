@@ -1,10 +1,18 @@
 # VolumeVisualisation-and-FlowVisualisation
 
-**Part 1 - Volume Visualisation**
+## Note
 
-1A 
+There are 3 folder in this page. The VolumeVisualisation folder is a project for the Part 1, the FlowVisualisation folder is a project for the Part 2, hedgehog visualisation and glyph-based visualisation, while the Streamline folder is a project for the Part 2, strealine-based visualisation.
 
-VTK Volume
+The build folder is not included due to the large file of more than 100MB in it. Therefore, to run the code, the configure, generate and run project process have to be done using CMake manually.
+
+
+
+## **Part 1 - Volume Visualisation**
+
+### 1A 
+
+#### VTK Volume
 
 ![image](https://github.com/TeohYx/VolumeVisualisation-and-FlowVisualisation/assets/67152792/1f40aada-4033-4037-9947-02078c54451c)
 
@@ -16,7 +24,7 @@ VTK Volume
 
 
 
-1B
+### 1B
 
 **Question:** How many important surfaces does each of your volumes have? What do these surfaces correspond to (e.g., “skin”)?
 
@@ -28,7 +36,7 @@ VTK Volume
 **Question:** For each volume, setup a transfer function for the dataset that uses appropriate colors and clearly displays multiple relevant iso-surfaces (e.g., the skin and bone from the head dataset shown in class)
 
 
-  Opacity
+  #### Opacity
   
 	// For head dataset
 	/*
@@ -49,7 +57,7 @@ VTK Volume
 	*/
 
 
-  Colors
+ #### Colors
   
 	// For head dataset
 	/*
@@ -70,7 +78,7 @@ VTK Volume
 	*/
 
 
-**User Controls:**
+#### **User Controls:**
 
     s - Toggle between Iso-surface and Ray-marching 
 
@@ -83,9 +91,9 @@ VTK Volume
 
 
 
-**Part 2 - Flow Visualisation**
+## **Part 2 - Flow Visualisation**
 
-1. Hedgehog Visualisation
+### 1. Hedgehog Visualisation
 
 Data: testData1.vtk
 
@@ -99,7 +107,7 @@ Data: carotid.vtk
 
 ![image](https://github.com/TeohYx/VolumeVisualisation-and-FlowVisualisation/assets/67152792/9f7b70fe-88c9-4fa4-8af7-cc5ca7e04335)
 
-2. Glyph-based Visualisation
+### 2. Glyph-based Visualisation
 
 Cone height = 1; Cone radius = 0.3; Scale = 2
 
@@ -120,7 +128,7 @@ Scale = 0.5
 ![image](https://github.com/TeohYx/VolumeVisualisation-and-FlowVisualisation/assets/67152792/1ab32f97-208c-469b-8e67-26fcdf816c10)
 
 
-3. Streamline-based Visualisation
+### 3. Streamline-based Visualisation
 
 Data: testData1.vtk
 
@@ -128,6 +136,6 @@ Data: testData1.vtk
 ![image](https://github.com/TeohYx/VolumeVisualisation-and-FlowVisualisation/assets/67152792/be3c5c2e-22c6-4145-8449-0f371a8b72e1)
 
 
-- Sampling Points along Streamlines
+#### - Sampling Points along Streamlines
 
 ![image](https://github.com/TeohYx/VolumeVisualisation-and-FlowVisualisation/assets/67152792/638777a8-3a1a-4e00-a2b2-b0c46710de42)
