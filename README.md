@@ -1,6 +1,83 @@
 # VolumeVisualisation-and-FlowVisualisation
 
-Part 1 - Volume Visualisation
+**Part 1 - Volume Visualisation**
+
+1A 
+
+VTK Volume
+
+![image](https://github.com/TeohYx/VolumeVisualisation-and-FlowVisualisation/assets/67152792/1f40aada-4033-4037-9947-02078c54451c)
+
+![image](https://github.com/TeohYx/VolumeVisualisation-and-FlowVisualisation/assets/67152792/cad07af6-2dd5-4cd2-9042-7fe8209a10fa)
+
+![image](https://github.com/TeohYx/VolumeVisualisation-and-FlowVisualisation/assets/67152792/876a9a67-c95f-4df5-a9ca-0c7b57623242)
+
+![image](https://github.com/TeohYx/VolumeVisualisation-and-FlowVisualisation/assets/67152792/df0adbbb-9b0b-475a-b7c7-e9b7037c910b)
+
+
+
+1B
+
+**Question:** How many important surfaces does each of your volumes have? What do these surfaces correspond to (e.g., “skin”)?
+
+    For head: 3 surfaces: Skin, Skull and Teeth. The position surfaces of skin, skull and teeth are 500, 1150 and 2650 respectively.
+
+    For teapot: 2 surfaces: Foremost Surface and Inner Surface. The position surfaces of formost surface and inner surface are 1000 and 4000 respectively.
+
+
+**Question:** For each volume, setup a transfer function for the dataset that uses appropriate colors and clearly displays multiple relevant iso-surfaces (e.g., the skin and bone from the head dataset shown in class)
+
+
+  Opacity
+  
+	// For head dataset
+	/*
+	isoOpacityTransferFunction->AddPoint(0, 0.0);
+	isoOpacityTransferFunction->AddPoint(50, 0.1);
+	isoOpacityTransferFunction->AddPoint(500, 0.3);		// Skin
+	isoOpacityTransferFunction->AddPoint(1150, 0.5);		// Skull
+	isoOpacityTransferFunction->AddPoint(1500, 0.7);
+	isoOpacityTransferFunction->AddPoint(2650, 1.0);		// Teeth
+	*/
+
+	// For teapot dataset
+	/*
+	isoOpacityTransferFunction->AddPoint(0, 0.0);
+	isoOpacityTransferFunction->AddPoint(1000, 0.5);
+	isoOpacityTransferFunction->AddPoint(4000, 0.7);
+	isoOpacityTransferFunction->AddPoint(8000, 0.9);
+	*/
+
+
+  Colors
+  
+	// For head dataset
+	/*
+	isoColorTransferFunction->AddRGBPoint(0.0, 0.0, 0.0, 0.0);
+	isoColorTransferFunction->AddRGBPoint(500.0, 1.0, 0.6, 0.0);		// Skin 1st layer
+	isoColorTransferFunction->AddRGBPoint(700.0, 1.0, 0.6, 0.0);		// Skin 2nd layer
+	isoColorTransferFunction->AddRGBPoint(800.0, 1.0, 0.0, 0.0);		// Skin 3rd layer
+	isoColorTransferFunction->AddRGBPoint(1150.0, 0.8, 0.8, 0.8);	// Skull
+	isoColorTransferFunction->AddRGBPoint(2650.0, 1.0, 1.0, 1.0);	// Teeth
+	*/
+
+	// For teapot dataset
+	/*
+	isoColorTransferFunction->AddRGBPoint(0.0, 0.0, 0.0, 0.0);
+	isoColorTransferFunction->AddRGBPoint(1000.0, 0.5, 1.0, 0.0);		// Foremost Surface
+	isoColorTransferFunction->AddRGBPoint(4000.0, 0.3, 0.24, 0.55);		// Inner Surface
+	isoColorTransferFunction->AddRGBPoint(8000.0, 0.94, 0.5, 0.5);		// Lobster
+	*/
+
+
+**User Controls:**
+
+    s - Toggle between Iso-surface and Ray-marching 
+
+    i - Decrease iso-value
+  
+    I - Increase iso-value
+
 
 
 
